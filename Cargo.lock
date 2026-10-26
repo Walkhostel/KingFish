@@ -3,32 +3,6 @@
 version = 4
 
 [[package]]
-name = "KingFish"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "argon2",
- "base64",
- "blake3",
- "chacha20poly1305",
- "clap",
- "directories",
- "ed25519-dalek",
- "hkdf",
- "if-addrs",
- "quinn",
- "rand 0.8.8",
- "rcgen",
- "rustls",
- "serde",
- "serde_json",
- "sha2",
- "thiserror",
- "tokio",
- "x25519-dalek",
-]
-
-[[package]]
 name = "aead"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -724,6 +698,32 @@ dependencies = [
  "cfg-if",
  "futures-util",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "kingfish"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "argon2",
+ "base64",
+ "blake3",
+ "chacha20poly1305",
+ "clap",
+ "directories",
+ "ed25519-dalek",
+ "hkdf",
+ "if-addrs",
+ "quinn",
+ "rand 0.8.8",
+ "rcgen",
+ "rustls",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+ "tokio",
+ "x25519-dalek",
 ]
 
 [[package]]
