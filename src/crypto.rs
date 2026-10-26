@@ -38,6 +38,16 @@ impl DeviceIdentity {
     pub fn private_key_bytes(&self) -> [u8; 32] {
         self.signing_key.to_bytes()
     }
+    /// Восстанавливает личность из сохранённых 32 байт закрытого ключа.
+    pub fn from_bytes(bytes: [u8; 32]) -> Result<Self> {
+        let signing_key = SigningKey::from_bytes(&bytes);
+        let verifying_key = signing_key.verifying_key();
+
+        Ok(Self {
+            signing_key,
+            verifying_key,
+        })
+    }
 }
 
 /// Временная пара X25519 для одной передачи.
